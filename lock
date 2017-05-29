@@ -12,9 +12,13 @@ IMAGE="$(mktemp).png"
 SHOT=(import -window root)
 DESKTOP=""
 
+# get path where the script is located to find the lock icon
+SCRIPTPATH=$(realpath "$0")
+SCRIPTPATH=${SCRIPTPATH%/*}
+
 DISPLAY_RE="([0-9]+)x([0-9]+)\\+([0-9]+)\\+([0-9]+)"
 IMAGE_RE="([0-9]+)x([0-9]+)"
-LOCK="lockscreens/lock_1.png"
+LOCK="$SCRIPTPATH/lockscreens/lock_1.png"
 PARAMS=""
 
 
@@ -92,9 +96,6 @@ fi
 
 "${SHOT[@]}" "$IMAGE"
 
-# get path where the script is located to find the lock icon
-SCRIPTPATH=$(realpath "$0")
-SCRIPTPATH=${SCRIPTPATH%/*}
 
 VALUE="60" #brightness value to compare to
 
