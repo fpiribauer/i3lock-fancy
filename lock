@@ -156,7 +156,7 @@ ${DESKTOP} ${DESKTOP:+-k on}
 # try to use a forked version of i3lock with prepared parameters
 if ! i3lock $AFLAG -n "${PARAM[@]}" -i "$IMAGE"  > /dev/null 2>&1; then
     # We have failed, lets get back to stock one
-    i3lock $AFLAG -n -i "$IMAGE" 
+    i3lock -u -n -i "$IMAGE" 
 fi
 
 # As above, if we were passed -d/--desktop, we'll attempt to restore all windows
