@@ -18,7 +18,7 @@ SCRIPTPATH=${SCRIPTPATH%/*}
 
 DISPLAY_RE="([0-9]+)x([0-9]+)\\+([0-9]+)\\+([0-9]+)"
 IMAGE_RE="([0-9]+)x([0-9]+)"
-LOCK="$SCRIPTPATH/lockscreens/lock_1.png"
+LOCK="/usr/share/i3lock-fancy/lockscreens/lock_1.png"
 PARAMS=""
 
 
